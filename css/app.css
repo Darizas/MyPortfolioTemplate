@@ -171,11 +171,27 @@ h6 {
   .wrapper .right .top__nav .burger .bar {
     width: 40px;
     height: 6px;
-    background-color: #5a331c;
+    background-color: black;
     margin: 8px 0;
+    transition: 0.7s;
   }
-  .wrapper .right .top__nav .burger:hover .bar {
-    background-color: #2d2af1;
+  .wrapper .right .top__nav .burger:hover .bar:nth-child(1) {
+    background-color: yellow;
+    height: 33%;
+    width: 50px;
+    margin: 0;
+  }
+  .wrapper .right .top__nav .burger:hover .bar:nth-child(2) {
+    background-color: green;
+    height: 33%;
+    width: 50px;
+    margin: 0;
+  }
+  .wrapper .right .top__nav .burger:hover .bar:nth-child(3) {
+    background-color: red;
+    height: 33%;
+    width: 50px;
+    margin: 0;
   }
 }
 
