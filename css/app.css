@@ -144,8 +144,47 @@ h6 {
   font-size: 18px;
 }
 
+@media (max-width: 900px) {
+  .wrapper nav {
+    display: none;
+  }
+}
+
 .wrapper .right {
   height: 1000px;
+}
+
+.wrapper .right .top__nav {
+  position: relative;
+}
+
+.wrapper .right .top__nav .burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .wrapper .right .top__nav .burger {
+    display: inline-block;
+    height: 50px;
+    cursor: pointer;
+  }
+  .wrapper .right .top__nav .burger .bar {
+    width: 40px;
+    height: 6px;
+    background-color: #5a331c;
+    margin: 8px 0;
+  }
+  .wrapper .right .top__nav .burger:hover .bar {
+    background-color: #2d2af1;
+  }
+}
+
+.wrapper .right .top__nav img {
+  height: 65px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 0;
 }
 
 .container {
