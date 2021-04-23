@@ -144,8 +144,63 @@ h6 {
   font-size: 18px;
 }
 
+@media (max-width: 900px) {
+  .wrapper nav {
+    display: none;
+  }
+}
+
 .wrapper .right {
   height: 1000px;
+}
+
+.wrapper .right .top__nav {
+  position: relative;
+}
+
+.wrapper .right .top__nav .burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .wrapper .right .top__nav .burger {
+    display: inline-block;
+    height: 50px;
+    cursor: pointer;
+  }
+  .wrapper .right .top__nav .burger .bar {
+    width: 40px;
+    height: 6px;
+    background-color: black;
+    margin: 8px 0;
+    transition: 0.7s;
+  }
+  .wrapper .right .top__nav .burger:hover .bar:nth-child(1) {
+    background-color: yellow;
+    height: 33%;
+    width: 50px;
+    margin: 0;
+  }
+  .wrapper .right .top__nav .burger:hover .bar:nth-child(2) {
+    background-color: green;
+    height: 33%;
+    width: 50px;
+    margin: 0;
+  }
+  .wrapper .right .top__nav .burger:hover .bar:nth-child(3) {
+    background-color: red;
+    height: 33%;
+    width: 50px;
+    margin: 0;
+  }
+}
+
+.wrapper .right .top__nav img {
+  height: 65px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 0;
 }
 
 .container {
