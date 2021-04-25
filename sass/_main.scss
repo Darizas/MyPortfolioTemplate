@@ -218,6 +218,9 @@
         margin: 10px 0 10px 15px;
         height: 30px;
         position: relative;
+        @media (max-width: 600px) {
+            margin: 10px 15px 10px;
+        }
     }
     .percentage__bar::before{
         content: "";
@@ -253,7 +256,7 @@
         content: "67%";
         max-width: 67%;
     }
-    button {
+    .down__resume {
         margin: 20px 0 10px 15px;
         padding: 12px 24px;
         background-color:#616161;
@@ -261,6 +264,67 @@
         font-size: 15px;
         i {
             padding-right: 15px;
+        }
+    }
+    .pricelist {
+        padding: 0 0 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 600px) {
+            display: block;
+          }
+        .pricelist__block {
+            width: 32%;
+            border: 1px solid #ddd;
+            text-align: center;
+            @media (max-width: 600px) {
+                width: 100%;
+                margin: 0 15px 15px 0;
+              }
+            .price__range {
+                font-size: 20px;
+                font-weight: 500;
+                background-color: #616161;
+                color: white;
+                padding: 32px 0;
+            }
+            .pro {
+                background-color: #60bab2;
+                color: white;
+            }
+            .list {
+                font-size: 15px;
+                padding: 16px 0;
+                color: #616161;
+                border-bottom: 1px solid #ddd;
+                h2{
+                    font-size: 30px;
+                    font-weight: 500;
+                    padding-bottom: 15px;
+                }
+                button {
+                    padding: 12px 24px;
+                    background-color: #60bab2;
+                    color: white;
+                    &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+            &:hover {
+                .price__range {
+                    background-color: black;
+                }
+                .list {
+                    color: black;
+                }
+                .pro{
+                    background-color: #009688;
+                }
+                button {
+                    background-color: #009688
+                }
+            }
         }
     }
   }
@@ -284,4 +348,10 @@
 }
 .white__bckgrnd {
   background-color: white;
+}
+.pro {
+    background-color: #60bab2;
+    &:hover {
+        background-color: #009688;
+    }
 }

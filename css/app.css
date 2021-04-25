@@ -360,6 +360,12 @@ h6 {
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .wrapper .right .percentage__bar {
+    margin: 10px 15px 10px;
+  }
+}
+
 .wrapper .right .percentage__bar::before {
   content: "";
   width: 100%;
@@ -399,7 +405,7 @@ h6 {
   max-width: 67%;
 }
 
-.wrapper .right button {
+.wrapper .right .down__resume {
   margin: 20px 0 10px 15px;
   padding: 12px 24px;
   background-color: #616161;
@@ -407,8 +413,85 @@ h6 {
   font-size: 15px;
 }
 
-.wrapper .right button i {
+.wrapper .right .down__resume i {
   padding-right: 15px;
+}
+
+.wrapper .right .pricelist {
+  padding: 0 0 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .wrapper .right .pricelist {
+    display: block;
+  }
+}
+
+.wrapper .right .pricelist .pricelist__block {
+  width: 32%;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .wrapper .right .pricelist .pricelist__block {
+    width: 100%;
+    margin: 0 15px 15px 0;
+  }
+}
+
+.wrapper .right .pricelist .pricelist__block .price__range {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #616161;
+  color: white;
+  padding: 32px 0;
+}
+
+.wrapper .right .pricelist .pricelist__block .pro {
+  background-color: #60bab2;
+  color: white;
+}
+
+.wrapper .right .pricelist .pricelist__block .list {
+  font-size: 15px;
+  padding: 16px 0;
+  color: #616161;
+  border-bottom: 1px solid #ddd;
+}
+
+.wrapper .right .pricelist .pricelist__block .list h2 {
+  font-size: 30px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.wrapper .right .pricelist .pricelist__block .list button {
+  padding: 12px 24px;
+  background-color: #60bab2;
+  color: white;
+}
+
+.wrapper .right .pricelist .pricelist__block .list button:hover {
+  background-color: black;
+}
+
+.wrapper .right .pricelist .pricelist__block:hover .price__range {
+  background-color: black;
+}
+
+.wrapper .right .pricelist .pricelist__block:hover .list {
+  color: black;
+}
+
+.wrapper .right .pricelist .pricelist__block:hover .pro {
+  background-color: #009688;
+}
+
+.wrapper .right .pricelist .pricelist__block:hover button {
+  background-color: #009688;
 }
 
 #overlay {
@@ -433,4 +516,12 @@ h6 {
 
 .white__bckgrnd {
   background-color: white;
+}
+
+.pro {
+  background-color: #60bab2;
+}
+
+.pro:hover {
+  background-color: #009688;
 }
