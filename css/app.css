@@ -413,6 +413,10 @@ h6 {
   font-size: 15px;
 }
 
+.wrapper .right .down__resume:hover {
+  background-color: #f1f1f1;
+}
+
 .wrapper .right .down__resume i {
   padding-right: 15px;
 }
