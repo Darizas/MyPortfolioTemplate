@@ -33,7 +33,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 15px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -196,7 +196,7 @@ h6 {
 }
 
 .wrapper .right header {
-  padding: 10px 15px 0;
+  padding: 10px 0 0 15px;
 }
 
 .wrapper .right header .top__nav {
@@ -270,7 +270,7 @@ h6 {
 
 .wrapper .right .design__row {
   display: flex;
-  padding: 10px 15px 0;
+  padding: 10px 0 0 15px;
   justify-content: space-between;
 }
 
@@ -317,6 +317,98 @@ h6 {
 .wrapper .right .paging .paging__button:hover {
   background-color: black;
   color: white;
+}
+
+.wrapper .right #about {
+  display: flex;
+  padding-left: 15px;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .wrapper .right #about {
+    display: block;
+    padding: 15px 0 0;
+  }
+}
+
+.wrapper .right #about img {
+  width: 49.5%;
+  float: left;
+}
+
+@media (max-width: 600px) {
+  .wrapper .right #about img {
+    width: 100%;
+    padding: 0 15px 15px;
+  }
+}
+
+.wrapper .right h4 {
+  padding: 30px 0 10px 15px;
+  font-size: 20px;
+}
+
+.wrapper .right p {
+  padding: 10px 0 0 15px;
+  line-height: 1.5;
+}
+
+.wrapper .right .percentage__bar {
+  margin: 10px 0 10px 15px;
+  height: 30px;
+  position: relative;
+}
+
+.wrapper .right .percentage__bar::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background-color: #9e9e9e;
+}
+
+.wrapper .right .percentage__bar::after {
+  background-color: #616161;
+  height: 30px;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+  padding: calc((30px - 15px) / 2);
+  color: white;
+}
+
+.wrapper .right .bar1::after {
+  content: "90%";
+  max-width: 90%;
+}
+
+.wrapper .right .bar2::after {
+  content: "85%";
+  max-width: 85%;
+}
+
+.wrapper .right .bar3::after {
+  content: "67%";
+  max-width: 67%;
+}
+
+.wrapper .right button {
+  margin: 20px 0 10px 15px;
+  padding: 12px 24px;
+  background-color: #616161;
+  color: white;
+  font-size: 15px;
+}
+
+.wrapper .right button i {
+  padding-right: 15px;
 }
 
 #overlay {
