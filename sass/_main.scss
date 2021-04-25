@@ -262,6 +262,9 @@
         background-color:#616161;
         color: white;
         font-size: 15px;
+        &:hover {
+            background-color: #f1f1f1;
+        }
         i {
             padding-right: 15px;
         }
