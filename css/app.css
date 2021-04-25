@@ -414,7 +414,8 @@ h6 {
 }
 
 .wrapper .right .down__resume:hover {
-  background-color: #f1f1f1;
+  background-color: #d4d4d4;
+  color: black;
 }
 
 .wrapper .right .down__resume i {
