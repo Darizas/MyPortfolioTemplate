@@ -37,6 +37,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 input,
@@ -90,15 +91,46 @@ h6 {
   width: 100%;
   background-color: #f1f1f1;
   justify-content: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .wrapper nav {
-  position: sticky;
-  top: 0;
+  display: block;
+  position: fixed;
   width: 300px;
   height: 100vh;
   background-color: white;
-  font-family: "Raleway", sans-serif;
+  z-index: 3;
+}
+
+@media (max-width: 1000px) {
+  .wrapper nav .nav__close {
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    right: 20px;
+  }
+  .wrapper nav .nav__close .bar {
+    height: 10px;
+    width: 50px;
+    background-color: black;
+    position: absolute;
+  }
+  .wrapper nav .nav__close .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 30px;
+    right: 10px;
+  }
+  .wrapper nav .nav__close .bar:nth-child(2) {
+    transform: rotate(-45deg);
+    top: 30px;
+    right: 10px;
+  }
+  .wrapper nav .nav__close:hover {
+    background-color: #dad6d6;
+  }
 }
 
 .wrapper nav img {
@@ -144,67 +176,120 @@ h6 {
   font-size: 18px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .wrapper nav {
     display: none;
   }
 }
 
 .wrapper .right {
-  height: 1000px;
+  display: block;
+  width: calc(100% - 300px);
+  margin-left: 300px;
 }
 
-.wrapper .right .top__nav {
-  position: relative;
+@media (max-width: 1000px) {
+  .wrapper .right {
+    margin: 0;
+    width: 100%;
+    transition: 0.4s;
+  }
 }
 
-.wrapper .right .top__nav .burger {
+.wrapper .right header {
+  padding: 10px 15px 0;
+}
+
+.wrapper .right header .top__nav {
   display: none;
 }
 
-@media (max-width: 900px) {
-  .wrapper .right .top__nav .burger {
+@media (max-width: 1000px) {
+  .wrapper .right header .top__nav {
+    display: block;
+    position: relative;
+  }
+  .wrapper .right header .top__nav .burger {
     display: inline-block;
     height: 50px;
     cursor: pointer;
   }
-  .wrapper .right .top__nav .burger .bar {
+  .wrapper .right header .top__nav .burger .bar {
     width: 40px;
     height: 6px;
     background-color: black;
     margin: 8px 0;
     transition: 0.7s;
   }
-  .wrapper .right .top__nav .burger:hover .bar:nth-child(1) {
+  .wrapper .right header .top__nav .burger:hover .bar:nth-child(1) {
     background-color: yellow;
     height: 33%;
     width: 50px;
     margin: 0;
   }
-  .wrapper .right .top__nav .burger:hover .bar:nth-child(2) {
+  .wrapper .right header .top__nav .burger:hover .bar:nth-child(2) {
     background-color: green;
     height: 33%;
     width: 50px;
     margin: 0;
   }
-  .wrapper .right .top__nav .burger:hover .bar:nth-child(3) {
+  .wrapper .right header .top__nav .burger:hover .bar:nth-child(3) {
     background-color: red;
     height: 33%;
     width: 50px;
     margin: 0;
   }
+  .wrapper .right header .top__nav img {
+    height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
 }
 
-.wrapper .right .top__nav img {
-  height: 65px;
-  border-radius: 50%;
-  position: absolute;
-  top: 10px;
-  right: 0;
+.wrapper .right header h1 {
+  padding: 10px 0;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.wrapper .right header .filters {
+  padding: 15px 0;
+  border-bottom: 6px solid #ccc;
+}
+
+.wrapper .right header .filters span {
+  font-size: 15px;
+  padding-right: 15px;
+}
+
+.wrapper .right header .filters .btn {
+  font-size: 15px;
+  padding: 8px 16px;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(218, 214, 214, 0.3);
+  cursor: pointer;
+  z-index: 2;
 }
 
 .container {
   display: block;
   width: 95%;
   max-width: 1600px;
+}
+
+.black__bckgrnd {
+  background-color: black;
+  color: white;
+}
+
+.white__bckgrnd {
+  background-color: white;
 }

@@ -13,9 +13,16 @@
 </head>
 <body>
     <div class="wrapper">
+        <div id="overlay" onclick="closeNav()"></div>
         <div class="container">
-            <nav>
+            <nav id="sideNav">
                 <img src="./img/FirstPhoto.jpg" alt="FirstPhoto">
+                <a href="#">
+                    <div class="nav__close" onclick="closeNav()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </a>
                 <h4>portfolio</h4>
                 <p>Template copied from <a href="https://www.w3schools.com/w3css/tryw3css_templates_portfolio.htm" target="_blank">w3schools.com</a></p>
                 <a href="#portfolio" class="nav__a"><i class="fas fa-th-large"></i>portfolio</a>
@@ -31,14 +38,25 @@
                 </div>
             </nav>
             <div class="right">
-                <div class="top__nav">
-                    <div class="burger">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
+                <header>
+                    <div class="top__nav">
+                        <div class="burger" onclick="openNav()">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <img src="./img/FirstPhoto.jpg" alt="">
                     </div>
-                    <img src="./img/FirstPhoto.jpg" alt="">
-                </div>
+                    <h1>My Portfolio</h1>
+                    <div class="filters">
+                        <span>Filter:</span>
+                        <button class="btn black__bckgrnd">ALL</button>
+                        <button class="btn white__bckgrnd"><i class="fas fa-gem"></i> Design</button>
+                        <button class="btn white__bckgrnd"><i class="fas fa-image"></i> Photos</button>
+                        <button class="btn white__bckgrnd"><i class="fas fa-map-pin"></i> Art</button>
+                    </div>
+                </header>
+
             </div>
         </div>
     </div>
