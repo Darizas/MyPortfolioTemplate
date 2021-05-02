@@ -368,6 +368,69 @@
         }
       }
     }
+    footer {
+      margin-left: 15px;
+      display: grid;
+      grid-template-areas: 'foo blog tags'
+                            'bottom bottom bottom';
+      grid-template-columns: 33% 33%;
+      h3 {
+        text-transform: uppercase;
+        padding: 15px 0 0 0;
+        font-size: 24px;
+      }
+      .foo {
+        grid-area: foo;
+        margin: 20px 0;
+        padding-left: 15px;
+        p{
+          padding-left: 0;
+        }
+      }
+      .blog {
+        grid-area: blog;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        padding-left: 15px;
+        .blog__block {
+          padding: 15px 0 0 ;
+          block-size: 50%;
+          img {
+            width: 75px;
+            padding-right: 15px;
+          }
+          .desc {
+            display: inline-block;
+            h5 {
+              font-size: 20px;
+              padding-bottom: 5px;
+            }
+          }
+        }
+      }
+      .tags {
+        grid-area: tags;
+        margin: 20px 0;
+        padding-left: 15px;
+        .tag {
+          display: inline-block;
+          font-size: 12px;
+          margin: 15px 5px 0 0;
+          padding: 2px 4px;
+          background-color: #9e9e9e;
+          color: black;
+        }
+      }
+      .bottom {
+        grid-area: bottom;
+        text-align: center;
+        padding: 30px 0;
+      }
+      a {
+        color: #fff;
+      }
+    }
   }
 }
 #overlay {
