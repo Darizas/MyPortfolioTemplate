@@ -509,9 +509,22 @@ h6 {
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .wrapper .right #contact .contact__way {
+    display: block;
+  }
+}
+
 .wrapper .right #contact .contact__way .contact__way__block {
   width: 33.3%;
   padding: 30px 0;
+}
+
+@media (max-width: 600px) {
+  .wrapper .right #contact .contact__way .contact__way__block {
+    width: 100%;
+    margin: 0 15px 15px 0;
+  }
 }
 
 .wrapper .right #contact .contact__way .contact__way__block i {
@@ -552,6 +565,12 @@ h6 {
   grid-template-columns: 33% 33%;
 }
 
+@media (max-width: 600px) {
+  .wrapper .right footer {
+    display: block;
+  }
+}
+
 .wrapper .right footer h3 {
   text-transform: uppercase;
   padding: 15px 0 0 0;
@@ -577,8 +596,12 @@ h6 {
 }
 
 .wrapper .right footer .blog .blog__block {
-  padding: 15px 0 0;
+  padding: 15px 0;
   block-size: 50%;
+}
+
+.wrapper .right footer .blog .blog__block:hover {
+  background-color: #f1f1f1a1;
 }
 
 .wrapper .right footer .blog .blog__block img {
@@ -593,6 +616,10 @@ h6 {
 .wrapper .right footer .blog .blog__block .desc h5 {
   font-size: 20px;
   padding-bottom: 5px;
+}
+
+.wrapper .right footer .blog hr {
+  border-top: 1px solid white;
 }
 
 .wrapper .right footer .tags {
